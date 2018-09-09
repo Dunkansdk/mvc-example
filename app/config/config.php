@@ -10,4 +10,6 @@
     // Donde se instancie 'APP_PATH' es la ruta que va a mostrar
     define('APP_PATH', dirname(dirname(__FILE__)));
     define('APP_NAME', 'Gestion Bonkan');
-    define('URL_PATH', '_URL_');
+    
+    // Directorio base
+    define('URL_PATH', dirname(dirname(__DIR__)));
