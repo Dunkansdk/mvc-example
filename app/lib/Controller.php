@@ -1,7 +1,8 @@
 <?php
 
     // '
-    // En este controller se cargan los modelos y las vistas
+    // En este controller se cargan los modelos y las vistas.
+    // Toda esta data llega desde los 'app/controller'
 
     class Controller {
 
@@ -10,7 +11,7 @@
          */
         public function model($model) 
         {
-            require_once('../model' . $model . '.php');
+            require_once('../app/model/' . $model . '.php');
             return new $model();
         }
 
@@ -18,7 +19,6 @@
          * Cargamos una vista en caso de que exista
          * Vamos desde el 'app/index.php' (Donde se hace el require) a 'app/view/'
          * 
-         * - Toda esta data llega desde los 'app/controller'
          * @data    ESTOS VAN A SER LOS PARAMETROS QUE SE VAN A ENVIAR A '/pages/view/***.php'
          *          Y SE ACCEDEN CON $data['whatever'];
          */

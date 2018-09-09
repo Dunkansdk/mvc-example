@@ -13,3 +13,8 @@
     
     // Directorio base
     define('URL_PATH', dirname(dirname(__DIR__)));
+
+    // Configuracion de la base de datos
+    define('DB_HOST', 'localhost');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');

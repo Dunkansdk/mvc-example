@@ -4,7 +4,8 @@
 
         public function __construct()
         {
-            // TODO: Aca podriamos cargar la base de datos?
+            // Obtenemos el modelo desde el 'lib/controller.php'
+            $this->product_model = $this->model('Product');
         }
 
         /**
@@ -13,13 +14,22 @@
          *      call_user_func_array() expects parameter 1 to be a valid callback, class 'Page' does not have a method 'index'
          */
         public function index() {
-            $this->view('pages/index');
+
+            // Obtenemos todos los productos desde la peticion a la bd que se hace desde el modelo correspondiente
+            $products = $this->product_model->obtain_products();
+
+            $data = [
+                'products' => $products
+            ];
+
+            // A partir de este punto solamente queda mostrar $data['products'] en la vista
+            $this->view('pages/index', $data);
         }
 
         public function other() {
 
             $data = [
-                'titulo' => 'Bienvenido, soy un dato de la vista other'
+                'title' => 'Bienvenido, soy un dato de la vista other'
             ];
 
             $this->view('pages/other', $data);
