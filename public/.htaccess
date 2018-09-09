@@ -1,0 +1,16 @@
+#
+#
+# Redireccionamos al public/index.php
+
+<IfModule mod_rewrite.c>
+    Options -Multiviews
+    # Reescribimos la url
+    RewriteEngine On
+    # Path del archivo 'base'
+    RewriteBase /mvc-example/public
+    # Cambie el archivo con el contenido '.php' que tenga
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f 
+    # Mapeamos todo lo que se pase a 'url=' (Ver 'app/lib/Core.php')
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>

@@ -1,0 +1,1 @@
+<h1>Soy la vista 'index.php'</h1>
