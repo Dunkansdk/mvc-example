@@ -1,18 +1,12 @@
 <?php
-
-    /**
-     * MANEJO DE RUTAS (GENERICO):
-     *  __FILE__                    /opt/lampp/htdocs/mvc-example/app/config/config.php
-     *  dirname(__FILE__)           /opt/lampp/htdocs/mvc-example/app/config
-     *  dirname(dirname(__FILE__))  /opt/lampp/htdocs/mvc-example/app
-     */     
     
     // Donde se instancie 'APP_PATH' es la ruta que va a mostrar
     define('APP_PATH', dirname(dirname(__FILE__)));
-    define('APP_NAME', 'Gestion Bonkan');
+    define('APP_NAME', 'app-name');
     
     // Directorio base
-    define('URL_PATH', dirname(dirname(__DIR__)));
+    define('URL_PATH', 'http://localhost/mvc-example/');
+    define('PUBLIC_PATH', 'http://localhost/mvc-example/public');
 
     // Configuracion de la base de datos
     define('DB_HOST', 'localhost');

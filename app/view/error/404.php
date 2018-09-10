@@ -6,4 +6,4 @@
         Back to index
     </a>
 
-<?php require APP_PATH . '/view/inc/panel_footer.php'; ?>
+<?php require APP_PATH . '/view/inc/footer.php'; ?>

@@ -1,6 +1,6 @@
 <?php
 
-    class Error extends Controller {
+    class Error404 extends Controller {
 
         public function __construct()
         {
