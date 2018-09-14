@@ -24,14 +24,16 @@
          */
         public function view($view, $data = []) 
         {
+            
             // NOTA IMPORTANTE: SI LA VISTA EXISTE PERO NO SE CREO LA FUNCION EN EL CONTROLADOR
             //                  VA A REDIRECCIONAR AL 'index())' DEL MISMO
             //                  SI LA VISTA NO EXISTE Y SE LLAMA A LA FUNCION DEL CONTROLADOR
-            //                  VA A HACER EL 'die()'
+            //                  VA A HACER EL LA EXCEPCION
+
             if(file_exists('../app/view/' . $view . '.php')) {
                 require_once('../app/view/' . $view . '.php');
             } else {
-                die('La vista no existe');
+                throw new \Expcetion('La vista no existe');
             }
         }
 

@@ -12,3 +12,6 @@
     define('DB_HOST', 'localhost');
     define('DB_USER', 'root');
     define('DB_PASS', '');
+
+    // Por si queremos mostrar los errores o unicamente redireccionar
+    define('SHOW_ERRORS', true);
