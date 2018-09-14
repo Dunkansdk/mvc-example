@@ -15,7 +15,7 @@
         public function index() 
         {
             $data = [
-                'tite' => 'Bienvenido a Gestion'
+                'title' => 'Bienvenido a Gestion'
             ];
 
             // A partir de este punto solamente queda mostrar $data['products'] en la vista
